@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐球直播 · 再次遇见</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: #f5efe8;
+            color: #2c2b28;
+            line-height: 1.75;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .page {
+            max-width: 820px;
+            width: 100%;
+            background: #fcf9f5;
+            border-radius: 28px;
+            padding: 3rem 2.5rem 4rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.03);
+        }
+
+        /* 抬头 */
+        .hero {
+            margin-bottom: 2.8rem;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 450;
+            letter-spacing: -0.02em;
+            color: #1e1c1a;
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            font-size: 1.05rem;
+            color: #5f5b55;
+            max-width: 600px;
+            border-left: 3px solid #d6cec2;
+            padding-left: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        /* 通用 section */
+        section {
+            margin: 2.5rem 0;
+        }
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 460;
+            color: #252320;
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid #e3dbd0;
+            padding-bottom: 0.3rem;
+        }
+        p, li {
+            font-size: 1rem;
+            color: #3b3834;
+        }
+
+        /* 目录感网格 */
+        .dir-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .dir-item {
+            background: #f3ede6;
+            padding: 0.9rem 1.2rem;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            border-left: 4px solid #b8aa98;
+            transition: background 0.15s;
+        }
+        .dir-item:hover { background: #ece3d9; }
+
+        /* 引用块 / 提示框 */
+        .note-box {
+            background: #ede7dd;
+            border-radius: 16px;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0 1.8rem;
+            border: 1px solid #dad0c2;
+            color: #3b3732;
+        }
+        .note-box p {
+            line-height: 1.7;
+        }
+        .note-box strong {
+            font-weight: 540;
+            color: #1f1c18;
+        }
+
+        .inset-quote {
+            background: #f6f1ea;
+            padding: 1.2rem 1.8rem;
+            border-radius: 14px;
+            margin: 1.6rem 0;
+            font-style: normal;
+            border-left: 6px solid #c2b3a1;
+        }
+        .inset-quote p {
+            font-size: 0.98rem;
+        }
+
+        /* 列表微调 */
+        ul, ol { padding-left: 1.5rem; margin: 0.8rem 0; }
+        li { margin-bottom: 0.4rem; }
+
+        /* 链接 */
+        a {
+            color: #5f4d3b;
+            text-decoration: none;
+            border-bottom: 1px solid #d4c6b8;
+            transition: border-color 0.15s, background 0.1s;
+            padding: 0 0.1em;
+        }
+        a:hover {
+            border-bottom-color: #7a624a;
+            background: #ede4d7;
+        }
+
+        /* 分隔 */
+        .meta-line {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: 0.92rem;
+            color: #7a7268;
+            border-top: 1px solid #ded5c9;
+            padding-top: 1.8rem;
+            margin-top: 2.8rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .page { padding: 2rem 1.2rem 2.5rem; }
+            .hero h1 { font-size: 1.9rem; }
+            .dir-grid { grid-template-columns: 1fr; }
+            .note-box, .inset-quote { padding: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="hero">
+        <h1>乐球直播</h1>
+        <p>有些地方，值得你再次回来。</p>
+    </div>
+
+    <!-- 知识库入口式：目录感 -->
+    <section>
+        <h2>站点速览</h2>
+        <div class="dir-grid">
+            <div class="dir-item">🏟️ 赛程 &amp; 实时比分</div>
+            <div class="dir-item">📺 多线路直播源</div>
+            <div class="dir-item">📋 赛事数据回溯</div>
+            <div class="dir-item">🗓️ 近期焦点战提醒</div>
+            <div class="dir-item">🔖 收藏 &amp; 历史记录</div>
+            <div class="dir-item">📎 帮助 &amp; 常见问题</div>
+        </div>
+        <p style="margin-top: 0.2rem; font-size: 0.95rem; color: #6b645c;">—— 内容围绕直播与赛事信息组织，方便随时查阅。</p>
+    </section>
+
+    <!-- 说明区：从再次访问的角度 -->
+    <section>
+        <h2>为什么再回来？</h2>
+        <p>也许你第一次来，是为了找一场关键比赛的直播源；后来发现这里一直有人在更新、维护，没有荒废。于是下一次，你直接打开书签，而不是重新搜索。</p>
+        <div class="inset-quote">
+            <p>我自己的习惯是：把 <a href="https://free-leqiuzhibo.com">乐球直播</a> 放在浏览器书签栏的常驻文件夹里。不是因为它的界面有多花哨，而是当我想看一场联赛、杯赛或者临时想起来某场对决时，它总在那里。安静，稳定，不制造噪音。</p>
+        </div>
+        <p>很多人把这类站点当作“备用方案”，但用久了你会发现：它渐渐变成了优先选择。</p>
+    </section>
+
+    <!-- 提示区 + 收藏建议 -->
+    <section>
+        <h2>一点提示</h2>
+        <div class="note-box">
+            <p><strong>如果这是你第一次来，或者隔了一段时间才回来：</strong></p>
+            <ul>
+                <li>建议将 <a href="https://free-leqiuzhibo.com">乐球直播</a> 加入浏览器书签，或添加到手机主屏幕。下次找比赛会快很多。</li>
+                <li>直播链接有时会因网络或版权原因变动，若遇无法播放，可以稍后刷新或切换线路。</li>
+                <li>网站没有铺天盖地的弹窗和诱导注册，你可以直接使用，不必担心被打扰。</li>
+            </ul>
+        </div>
+        <p style="font-size: 0.95rem; color: #605b54;">另外，如果你习惯用阅读模式或简洁视图，大部分浏览器能正常适配这里的排版。</p>
+    </section>
+
+    <!-- 相关信息区 -->
+    <section>
+        <h2>相关信息</h2>
+        <p>站点主要聚焦于足球赛事直播聚合，涵盖主流联赛及杯赛。内容由维护者持续整理，频率大致跟随赛历走。</p>
+        <ul>
+            <li><strong>覆盖面：</strong>欧洲五大联赛、欧冠、亚冠、部分国家队赛事。</li>
+            <li><strong>时效性：</strong>赛前十分钟左右更新可用链接，赛后保留回放或集锦入口（视源而定）。</li>
+            <li><strong>无账户系统：</strong>即开即用，不收集个人信息。收藏依赖浏览器本身。</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">如果你有关于直播源稳定性的反馈，或者发现某个重要赛事缺失，可以通过站内联系方式告知（页面底部一般有说明）。这类信息对于持续运营很有帮助。</p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+        <h2>常见疑问摘要</h2>
+        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+            <div><strong>Q：</strong>页面打开后没有画面？ <span style="font-size: 0.95rem; color: #4f4a43;">→ 检查网络，或尝试切换直播线路。部分源需要等待缓冲。</span></div>
+            <div><strong>Q：</strong>需要注册 / 付费吗？ <span style="font-size: 0.95rem; color: #4f4a43;">→ 完全免费，也无需登录。</span></div>
+            <div><strong>Q：</strong>手机上看方便吗？ <span style="font-size: 0.95rem; color: #4f4a43;">→ 页面适配移动端，可直接在浏览器打开。建议添加到主屏幕。</span></div>
+            <div><strong>Q：</strong>链接失效怎么办？ <span style="font-size: 0.95rem; color: #4f4a43;">→ 赛前/赛中链接更新较频繁，若遇失效可等待数分钟再试。</span></div>
+        </div>
+    </section>
+
+    <!-- 结尾再次自然带出链接 -->
+    <div class="meta-line">
+        <span>再次访问，就像打开一本常翻的书。</span>
+        <span><a href="https://free-leqiuzhibo.com">乐球直播</a> · 持续更新中</span>
+    </div>
+</div>
+</body>
+</html>
